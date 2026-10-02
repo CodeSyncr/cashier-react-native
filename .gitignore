@@ -1,0 +1,18 @@
+node_modules/
+lib/
+coverage/
+*.log
+.DS_Store
+
+# Android
+android/build/
+android/.gradle/
+android/.cxx/
+android/local.properties
+*.iml
+.idea/
+
+# iOS
+ios/build/
+*.xcuserstate
+xcuserdata/

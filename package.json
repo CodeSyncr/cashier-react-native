@@ -1,0 +1,72 @@
+{
+  "name": "@codesyncr/cashier-react-native",
+  "version": "1.0.0",
+  "description": "Nimbus Cashier for React Native: App Store and Google Play subscriptions verified by your Cashier app, entitlements, and native paywalls.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "files": [
+    "src",
+    "lib",
+    "ios",
+    "android/build.gradle",
+    "android/src",
+    "android/gradle.properties",
+    "cashier-react-native.podspec",
+    "!**/__tests__",
+    "!android/build",
+    "!ios/build"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "in-app-purchase",
+    "subscriptions",
+    "paywall",
+    "storekit",
+    "google-play-billing",
+    "nimbus",
+    "cashier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeSyncr/cashier-react-native.git"
+  },
+  "homepage": "https://github.com/CodeSyncr/cashier-react-native#readme",
+  "bugs": "https://github.com/CodeSyncr/cashier-react-native/issues",
+  "author": "CodeSyncr",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": ">=0.71.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.4"
+  },
+  "codegenConfig": {
+    "name": "RNCashierSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.codesyncr.cashier.reactnative"
+    }
+  },
+  "cashier": {
+    "iosSdkVersion": "1.1.0",
+    "androidSdkVersion": "1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
